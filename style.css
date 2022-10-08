@@ -10,6 +10,10 @@ body, html {
     src: url('/fonts/Gistesy.ttf');
 }
 
+* {
+    color: #e5ba7a;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: nordico, serif;
     font-size: xxx-large;
@@ -32,8 +36,9 @@ h1,h2,h3,h4,h5,h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    transform: translate(-50%, 300%);
+    font-family: nordico, serif;
+    font-size: 3em;
 }
 
 .hero-text button {
@@ -84,7 +89,42 @@ li a:hover:not(.active) {
 
 section {
     background-color: #010216;
-    color: #e5ba7a;
     margin-left: 2em;
     margin-right: 2em;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 12px;
+    background-color: #010216;
+    border: 2px solid #e5ba7a;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+
+input, textarea {
+    margin-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: .5fr .5fr;
+    grid-template-columns: none;
+}
+
+@media screen and (min-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+    }
+}
+
+.grid-item {
 }
